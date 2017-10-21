@@ -30,7 +30,7 @@ spec:
   containers:
   - name: py
     image: ubuntu:16.04
-    command: ["/bin/bash", "/home/test/job/run.sh"]
+    command: ["/bin/bash", "/home/test/kube-test/job/run.sh"]
     resources:
       limits:
         alpha.kubernetes.io/nvidia-gpu: 1
