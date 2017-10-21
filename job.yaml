@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: py
+spec:
+  securityContext:
+    runAsUser: id
+  volumes:
+  - name: home
+    persistentVolumeClaim:
+      claimName: home
+  - name: tools
+    persistentVolumeClaim:
+      claimName: tools
+  - name: datasets
+    persistentVolumeClaim:
+      claimName: datasets
+  - hostPath:
+      path: /usr/lib/nvidia-375/bin
+    name: nvbin
+  - hostPath:
+      path: /usr/lib/nvidia-375
+    name: nvlib
+  - hostPath:
+      path: /usr/lib/x86_64-linux-gnu/
+    name: lib
+  - hostPath:
+      path: /scratch96/
+    name: scratch
+  containers:
+  - name: py
+    image: ubuntu:16.04
+    command: ["/bin/bash", "/home/test/job/run.sh"]
+    resources:
+      limits:
+        alpha.kubernetes.io/nvidia-gpu: 1
+        memory: "4Gi"
+        cpu: "1"
+      requests:
+        memory: "4Gi"
+        cpu: "1"
+    volumeMounts:
+    - mountPath: /home/
+      name: home
+    - mountPath: /tools
+      name: tools
+    - mountPath: /datasets
+      name: datasets
+    - mountPath: /usr/local/nvidia/bin
+      name: nvbin
+    - mountPath: /usr/local/nvidia/lib
+      name: nvlib
+    - mountPath: /usr/lib/x86_64-linux-gnu/
+      name: lib
+    - mountPath: /scratch96/
+      name: scratch
+  restartPolicy: Never
