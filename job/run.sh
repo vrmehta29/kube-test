@@ -8,7 +8,7 @@ source /tools/config.sh
 # Activate your environment
 source activate py35
 # Change to the directory in which your code is present
-cd /path/to/your/code
+cd /path/to/run.sh
 # Run the code. The -u option is used here to use unbuffered writes
 # so that output is piped to the file as and when it is produced.
 python -u convolutional.py &> out
