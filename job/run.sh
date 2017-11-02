@@ -11,4 +11,5 @@ source activate py35
 cd /path/to/run.sh
 # Run the code. The -u option is used here to use unbuffered writes
 # so that output is piped to the file as and when it is produced.
+# Here, the code is the MNIST Tensorflow example.
 python -u convolutional.py &> out
