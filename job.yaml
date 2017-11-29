@@ -75,7 +75,7 @@ spec:
     # Entry for the other folders mentioned above.
     - mountPath: /tools
       name: tools
-    - mountPath: /datasets
+    - mountPath: /datasets/data2
       name: data2
     - mountPath: /usr/local/nvidia/bin
       name: nvbin
