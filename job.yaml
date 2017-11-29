@@ -37,11 +37,6 @@ spec:
   - hostPath:
       path: /usr/lib/x86_64-linux-gnu/
     name: lib
-  # This is a scratch folder for storing temporary data. Note that all files will be
-  # deleted 96 hours after creation!!
-  - hostPath:
-      path: /scratch96/
-    name: scratch
   # You can specify a label indicating a specific model of GPU here when you need it.
   # Leave it commented when learning how to use the cluster.
 #  nodeSelector:
@@ -93,6 +88,4 @@ spec:
       name: nvlib
     - mountPath: /usr/lib/x86_64-linux-gnu/
       name: lib
-    - mountPath: /scratch96/
-      name: scratch
   restartPolicy: Never
