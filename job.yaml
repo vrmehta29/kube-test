@@ -19,7 +19,7 @@ spec:
       claimName: tools
   - name: datasets
     persistentVolumeClaim:
-      claimName: datasets
+      claimName: data1
   # The following 3 entries make the Nvidia drivers available. You do not need to
   # modify them.
   - hostPath:
@@ -76,7 +76,7 @@ spec:
     - mountPath: /tools
       name: tools
     - mountPath: /datasets
-      name: datasets
+      name: data1
     - mountPath: /usr/local/nvidia/bin
       name: nvbin
     - mountPath: /usr/local/nvidia/lib
