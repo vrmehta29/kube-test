@@ -17,7 +17,7 @@ spec:
   - name: tools
     persistentVolumeClaim:
       claimName: tools
-  - name: datasets
+  - name: data2
     persistentVolumeClaim:
       claimName: data2
   # The following 3 entries make the Nvidia drivers available. You do not need to
