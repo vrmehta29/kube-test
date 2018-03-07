@@ -41,8 +41,11 @@ spec:
       path: /usr/lib/nvidia-driver
     name: nvlib
   - hostPath:
-      path: /usr/lib/x86_64-linux-gnu/
+      path: /usr/lib/
     name: lib
+  - hostPath:
+      path: /usr/bin
+    name: bin
   # You can specify a label indicating a specific model of GPU here when you need it.
   # Leave it commented when learning how to use the cluster.
 #  nodeSelector:
@@ -96,6 +99,8 @@ spec:
       name: nvbin
     - mountPath: /usr/local/nvidia/lib
       name: nvlib
-    - mountPath: /usr/lib/x86_64-linux-gnu/
+    - mountPath: /usr/lib/
       name: lib
+    - mountPath: /usr/bin/
+      name: bin
   restartPolicy: Never
