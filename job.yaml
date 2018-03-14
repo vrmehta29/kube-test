@@ -46,9 +46,9 @@ spec:
   - hostPath:
       path: /usr/bin
     name: bin
-  - hostPath: /lib
-      path: lib
-    name: 
+  - hostPath:
+      path: /lib
+    name: lib
   # You can specify a label indicating a specific model of GPU here when you need it.
   # Leave it commented when learning how to use the cluster.
 #  nodeSelector:
