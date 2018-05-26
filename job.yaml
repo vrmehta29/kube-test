@@ -23,9 +23,9 @@ spec:
   - name: data2
     persistentVolumeClaim:
       claimName: data2
-  - name: data3
-    persistentVolumeClaim:
-      claimName: data3
+#  - name: data3
+#    persistentVolumeClaim:
+#      claimName: data3
   - name: scratch1
     persistentVolumeClaim:
       claimName: scratch1
@@ -92,8 +92,8 @@ spec:
       name: data1
     - mountPath: /datasets/data2
       name: data2
-    - mountPath: /datasets/data3
-      name: data3
+#    - mountPath: /datasets/data3
+#      name: data3
     - mountPath: /scratch/scratch1
       name: scratch1
     - mountPath: /scratch/scratch2
