@@ -17,21 +17,21 @@ spec:
   - name: tools
     persistentVolumeClaim:
       claimName: tools
-  - name: data1
-    persistentVolumeClaim:
-      claimName: data1
-  - name: data2
-    persistentVolumeClaim:
-      claimName: data2
+#  - name: data1
+#    persistentVolumeClaim:
+#      claimName: data1
+#  - name: data2
+#    persistentVolumeClaim:
+#      claimName: data2
 #  - name: data3
 #    persistentVolumeClaim:
 #      claimName: data3
   - name: scratch1
     persistentVolumeClaim:
       claimName: scratch1
-  - name: scratch2
-    persistentVolumeClaim:
-      claimName: scratch2
+#  - name: scratch2
+#    persistentVolumeClaim:
+#      claimName: scratch2
   # The following 3 entries make the Nvidia drivers available. You do not need to
   # modify them.
   - hostPath:
@@ -88,16 +88,16 @@ spec:
     # Entry for the other folders mentioned above.
     - mountPath: /tools
       name: tools
-    - mountPath: /datasets/data1
-      name: data1
-    - mountPath: /datasets/data2
-      name: data2
+#    - mountPath: /datasets/data1
+#      name: data1
+#    - mountPath: /datasets/data2
+#      name: data2
 #    - mountPath: /datasets/data3
 #      name: data3
     - mountPath: /scratch/scratch1
       name: scratch1
-    - mountPath: /scratch/scratch2
-      name: scratch2
+#    - mountPath: /scratch/scratch2
+#      name: scratch2
     - mountPath: /usr/local/nvidia/bin
       name: nvbin
     - mountPath: /usr/local/nvidia/lib
